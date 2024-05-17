@@ -1,0 +1,142 @@
+@font-face {
+  font-family: 'Rubik';
+  src: url("Rubik-Regular.woff");
+  font-weight: 'Regular'
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', 'sans-serif', 'monospace';
+}
+
+body {
+  width: 100vw;
+  max-width: 960px;
+  margin: 0 auto;
+  background-color:rgb(139, 153, 236)
+}
+
+.sect1 {
+  height: calc((181 / 288) * 100vw);
+  max-height: calc((181 / 288) * 960px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  justify-content: center;
+  background-image: url("background1.png");
+  background-size: cover;
+  background-attachment: scroll;
+  overflow: hidden;
+}
+
+.sect1-left, .sect1-right {
+  width: 50vw;
+  position: relative;
+  background-color: rgb(255, 220, 190);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*.sect1-left {
+  left: -10%;
+}
+
+.sect1-right {
+  right: -10%;
+}*/
+
+.sect1-left img {
+  width: 30vw;
+  max-width: 200px;
+}
+
+.sect1-arrow, .sect1-right h3 {
+  font-size: 6vw;
+  background-image: url('background1.png');
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+  background-clip: text;
+  color: transparent;
+}
+
+.sect1-right h3 {
+  text-align: center;
+  font-size: 4vw;
+}
+
+.sect2 {
+  height: calc((449 / 288) * 100vw);
+  max-height: calc((449 / 288) * 960px);
+  background-image: url('background2.png');
+  background-size: cover;
+  background-attachment: scroll;
+  margin: 0;
+}
+
+.sect2-card {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  
+}
+
+.sect2-card-rowwrap {
+  display: flex;
+  gap: 8px;
+  margin: 5px auto 10px 12.5vw;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 12px;
+}
+
+.sect2-card-rowwrap:nth-child(1) {
+  margin-top: 30px;
+  margin-left: 8vw;
+}
+
+.sect2-card-rowwrap:nth-child(2) {
+  margin-left: 20px;
+}
+
+.sect2-card-wrap img {
+  width: 13.5vw;
+  max-width: 118px;
+}
+
+.sect2-card-wrap:hover img, .sect2-card-wrap:focus img {
+  position: relative;
+  top: -2px;
+  left: -2px;
+  transform: scale(1.1);
+}
+
+.sect2-advice {
+  margin: 30px auto;
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.sect2-advice.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.sect2-advice h3 {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  color: rgb(238, 216, 168);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(95, 97, 107);
+}
+
+.sect2-advice span {
+  color:rgb(139, 153, 236);
+}

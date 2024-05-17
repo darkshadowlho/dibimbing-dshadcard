@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karuta milik M Faiz</title>
+  <link rel="icon" type="image/x-icon" href="dshad-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sect1">
+    <div class="sect1-left">
+      <div class="sect1-arrow">«  «  «  «  «  «</div>
+      <img src="dshadpic.png" alt="profpic">
+      <div class="sect1-arrow">«  «  «  «  «  «</div>
+    </div>
+    <div class="sect1-right">
+      <div class="sect1-arrow">»  »  »  »  »  »</div>
+      <h3>Kartu Koleksi Karuta <br> Milik M Faiz</h3>
+      <div class="sect1-arrow">»  »  »  »  »  »</div>
+    </div>
+  </div>
+  <div class="sect2">
+    <div class="sect2-card">
+      <div class="sect2-card-rowwrap">
+        <div class="sect2-card-wrap"><img src="kartu-1.jpg"></div>
+        <div class="sect2-card-wrap"><img src="kartu-2.jpg"></div>
+        <div class="sect2-card-wrap"><img src="kartu-3.jpg"></div>
+        <div class="sect2-card-wrap"><img src="kartu-4.jpg"></div>
+      </div>
+      <div class="sect2-card-rowwrap">
+        <div class="sect2-card-wrap"><img src="kartu-5.jpg"></div>
+        <div class="sect2-card-wrap"><img src="kartu-6.jpg"></div>
+        <div class="sect2-card-wrap"><img src="kartu-7.jpg"></div>
+        <div class="sect2-card-wrap"><img src="kartu-8.jpg"></div>
+      </div>
+      <div class="sect2-card-rowwrap">
+        <div class="sect2-card-wrap"><img src="kartu-9.jpg"></div>
+        <div class="sect2-card-wrap"><img src="kartu-10.jpg"></div>
+        <div class="sect2-card-wrap"><img src="kartu-11.jpg"></div>
+        <div class="sect2-card-wrap"><img src="kartu-12.jpg"></div>
+      </div>
+    </div>
+    <div class="sect2-advice">
+      <h3>Jangan lupa <span>Belajar</span> <br> Jangan <span>Main</span> Terus Hehe!!</h3>
+    </div>
+  </div>
+  <script>
+    window.addEventListener("scroll", function () {
+      const sectionLeft = document.querySelector(".sect1-left");
+      const sectionRight = document.querySelector(".sect1-right")
+      let value = window.scrollY;
+      sectionLeft.style.left = "-" + value + "px"; //70px
+      sectionRight.style.right = "-" + value + "px";
+
+      const reveals = document.querySelector(".sect2-advice");
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals.getBoundingClientRect().top;
+      const elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals.classList.add("active");
+      } else {
+        reveals.classList.remove("active");
+      }
+    });
+    
+  </script>
+</body>
+</html>
